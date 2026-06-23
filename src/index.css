@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --accent: #8B5CF6;
+  --accent-soft: rgba(139,92,246,0.15);
+  --accent2: #8B5CF6;
+  --accent2-soft: rgba(139,92,246,0.15);
+
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+  color: rgba(255,255,255,0.87);
+  background-color: #000;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #0a0a0a;
+}
+
+/* Font utility */
+.font-display { font-family: 'Space Grotesk', sans-serif; }
+.font-mono, [class*="font-mono"] { font-family: 'Space Mono', monospace !important; }
+
+/* 3D Core */
+.perspective-2000 { perspective: 2000px; }
+.preserve-3d { transform-style: preserve-3d; }
+.bg-radial-vignette { background: radial-gradient(circle, transparent 20%, rgba(0,0,0,1) 100%); }
+
+/* Accent glow utility */
+.glow-accent { text-shadow: 0 0 20px rgba(230,0,115,0.5); }
+.glow-accent2 { text-shadow: 0 0 20px rgba(139,92,246,0.4); }
+.border-accent { border-color: rgba(230,0,115,0.5) !important; }
+
+@keyframes pulseShadow {
+  0%   { box-shadow: 0 0 0 0   rgba(139,92,246, 0.4); }
+  70%  { box-shadow: 0 0 0 10px rgba(139,92,246, 0); }
+  100% { box-shadow: 0 0 0 0   rgba(139,92,246, 0); }
+}
+.animate-pulseShadow { animation: pulseShadow 2s infinite; }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, opacity;
+}
+.reveal.active { opacity: 1; transform: translateY(0) scale(1); }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #0a0a0a; }
+::-webkit-scrollbar-thumb { background: rgba(230,0,115,0.3); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(230,0,115,0.6); }

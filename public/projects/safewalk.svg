@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#0a120a"/>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="rgba(52,211,153,0.12)"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0)"/>
+    </radialGradient>
+  </defs>
+  <!-- grid -->
+  <line x1="0" y1="1" x2="800" y2="1" stroke="rgba(52,211,153,0.08)" stroke-width="1"/>
+  <!-- header bar -->
+  <rect width="800" height="52" fill="rgba(0,0,0,0.6)"/>
+  <circle cx="26" cy="26" r="10" fill="rgba(52,211,153,0.2)" stroke="rgba(52,211,153,0.5)" stroke-width="1.5"/>
+  <text x="46" y="31" font-family="monospace" font-size="13" font-weight="bold" fill="rgba(52,211,153,0.9)">SafeWalk</text>
+  <text x="600" y="31" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.3)">● MONITORING ACTIVE</text>
+  <!-- webcam frame -->
+  <rect x="60" y="70" width="440" height="340" rx="12" fill="#060e06" stroke="rgba(52,211,153,0.3)" stroke-width="1.5"/>
+  <!-- skeleton overlay - simplified pose estimation lines -->
+  <g stroke="rgba(52,211,153,0.7)" stroke-width="2.5" fill="none" stroke-linecap="round">
+    <!-- head -->
+    <circle cx="280" cy="160" r="22" stroke-width="1.5"/>
+    <!-- spine -->
+    <line x1="280" y1="182" x2="280" y2="280"/>
+    <!-- shoulders -->
+    <line x1="215" y1="210" x2="345" y2="210"/>
+    <!-- arms -->
+    <line x1="215" y1="210" x2="190" y2="265"/>
+    <line x1="345" y1="210" x2="370" y2="265"/>
+    <!-- hips -->
+    <line x1="245" y1="280" x2="315" y2="280"/>
+    <!-- legs -->
+    <line x1="245" y1="280" x2="235" y2="370"/>
+    <line x1="315" y1="280" x2="325" y2="370"/>
+  </g>
+  <!-- joint dots -->
+  <g fill="rgba(52,211,153,0.9)">
+    <circle cx="280" cy="160" r="4"/>
+    <circle cx="215" cy="210" r="4"/><circle cx="345" cy="210" r="4"/>
+    <circle cx="190" cy="265" r="4"/><circle cx="370" cy="265" r="4"/>
+    <circle cx="280" cy="280" r="4"/>
+    <circle cx="245" cy="280" r="4"/><circle cx="315" cy="280" r="4"/>
+    <circle cx="235" cy="370" r="4"/><circle cx="325" cy="370" r="4"/>
+  </g>
+  <!-- status box -->
+  <rect x="80" y="82" width="120" height="24" rx="4" fill="rgba(52,211,153,0.15)" stroke="rgba(52,211,153,0.4)" stroke-width="1"/>
+  <text x="90" y="98" font-family="monospace" font-size="10" fill="rgba(52,211,153,0.9)">● POSE DETECTED</text>
+  <!-- right panel -->
+  <rect x="520" y="70" width="220" height="340" rx="8" fill="rgba(0,0,0,0.4)" stroke="rgba(52,211,153,0.1)" stroke-width="1"/>
+  <text x="540" y="100" font-family="monospace" font-size="10" fill="rgba(52,211,153,0.6)">DETECTION LOG</text>
+  <rect x="530" y="110" width="200" height="1" fill="rgba(52,211,153,0.15)"/>
+  <text x="540" y="135" font-family="monospace" font-size="9" fill="rgba(255,255,255,0.5)">12:04:02  STANDING</text>
+  <text x="540" y="155" font-family="monospace" font-size="9" fill="rgba(255,255,255,0.5)">12:04:18  STANDING</text>
+  <text x="540" y="175" font-family="monospace" font-size="9" fill="rgba(52,211,153,0.7)">12:04:35  ✓ NORMAL</text>
+  <text x="540" y="195" font-family="monospace" font-size="9" fill="rgba(255,255,255,0.5)">12:04:52  STANDING</text>
+  <rect x="530" y="260" width="200" height="60" rx="6" fill="rgba(52,211,153,0.06)" stroke="rgba(52,211,153,0.2)" stroke-width="1"/>
+  <text x="545" y="282" font-family="monospace" font-size="9" fill="rgba(52,211,153,0.7)">PRIVACY STATUS</text>
+  <text x="545" y="300" font-family="monospace" font-size="9" fill="rgba(255,255,255,0.5)">In-browser · No upload</text>
+  <!-- footer bar -->
+  <rect y="448" width="800" height="52" fill="rgba(0,0,0,0.5)"/>
+  <text x="400" y="478" text-anchor="middle" font-family="monospace" font-size="10" fill="rgba(52,211,153,0.5)">TensorFlow.js · React · Next.js · TypeScript · Tailwind CSS</text>
+</svg>
